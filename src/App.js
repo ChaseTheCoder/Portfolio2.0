@@ -4,6 +4,13 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import { Nav, Navbar } from 'react-bootstrap'
 
+import Home from './pages/Home';
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Resume from './pages/Resume';
+import Contact from './pages/Contact';
+
+
 class App extends React.Component {
 
     constructor(props) {
@@ -43,7 +50,7 @@ class App extends React.Component {
             <Router>
                 <Container className="p-0" fluid={true}>
                     <Navbar className="border-bottom">
-                        <Navbar.Brand>Chase Sheaff</Navbar.Brand>
+                        <Navbar.Brand as={Link} to="/" >Chase Sheaff</Navbar.Brand>
                         <Navbar.Toggle classname="border-bottom" aria-controls="navbar-toggle" />
                         <Navbar.Collapse id="navbar-toggle">
                             <Nav>
@@ -51,9 +58,18 @@ class App extends React.Component {
                                 <Link className="nav-link" to="/projects">Projects</Link>
                                 <Link className="nav-link" to="/resume">Resume</Link>
                                 <Link className="nav-link" to="/contact">Contact</Link>
+                                
+                                
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
+                    
+                    <Route path="/" exact render={() => <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
+                    <Route path="/" exact render={() => <About title={this.state.home.title} subTitle={this.state.home.subTitle} />} />
+                    <Route path="/" exact render={() => <Projects title={this.state.home.title} />} />
+                    <Route path="/" exact render={() => <Resume title={this.state.home.title} />} />
+                    <Route path="/" exact render={() => <Contact title={this.state.home.title} />} />
+
                 </Container>
             </Router>
       );
