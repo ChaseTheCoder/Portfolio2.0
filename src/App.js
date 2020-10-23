@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
 import { Nav, Navbar } from 'react-bootstrap'
 
 class App extends React.Component {
@@ -25,13 +26,13 @@ class App extends React.Component {
                 title: 'About me',
                 subTitle: 'Software Engineer with an education and tech startup background. I’ve learned to be an expert working cross-functionally on many projects with successful outcomes in education and tech.  My goal is to make intuitive applications and develop along with an inclusive company.'
             },
-            Projects: {
+            projects: {
                 title: 'Resume',
             },
-            Resume: {
+            resume: {
                 title: 'Resume',
             },
-            Contact: {
+            contact: {
                 title: 'Let\'s chat!',
             }
         }
@@ -40,7 +41,20 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-                <h2>Hey Gurl</h2>
+                <Container className="p-0" fluid={true}>
+                    <Navbar className="border-bottom">
+                        <Navbar.Brand>Chase Sheaff</Navbar.Brand>
+                        <Navbar.Toggle classname="border-bottom" aria-controls="navbar-toggle" />
+                        <Navbar.Collapse id="navbar-toggle">
+                            <Nav>
+                                <Link className="nav-link" to="/about">About</Link>
+                                <Link className="nav-link" to="/projects">Projects</Link>
+                                <Link className="nav-link" to="/resume">Resume</Link>
+                                <Link className="nav-link" to="/contact">Contact</Link>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Navbar>
+                </Container>
             </Router>
       );
     }
