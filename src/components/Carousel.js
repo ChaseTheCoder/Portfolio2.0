@@ -1,10 +1,13 @@
 import React from 'react';
 
+import Card from '../components/Card';
+
 import emojigotchi from '../assets/images/emojigotchi.png';
 import delsecto from '../assets/images/delsecto.png';
 import netflix from '../assets/images/netflix.png';
 import portfolio from '../assets/images/portfolio.png';
 import wayfarer from '../assets/images/wayfarer.png';
+import { Container, Row } from 'react-bootstrap';
 
 class Carousel extends React.Component {
 
@@ -72,9 +75,19 @@ class Carousel extends React.Component {
     });
   }
 
+  makeItems = (items) => {
+    return items.map(item => {
+      return <Card item={item} onClick={(e => this.handleCardClick(item.id, e))} key={item.id} />
+    })
+  }
+
   render() {
     return(
-      <p>Carousle, Hey</p> 
+      <Container flued={true}>
+        <Row className="justify-content-around">
+          {this.makeItems(this.state.items)}
+        </Row>
+      </Container>
     )
   }
 
