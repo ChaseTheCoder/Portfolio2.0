@@ -1,9 +1,15 @@
 import React from 'react';
 
+import Hero from '../components/Hero';
+import Carousel from '../components/Carousel';
+
 function Home(props) {
 
   return(
-    <p>Hey, gurl! Home</p>
+    <div>
+      <Hero title={props.title} subTitle={props.subTitle} text={props.text } />
+      <Carousel />
+    </div>
   );
 }
 

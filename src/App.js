@@ -65,10 +65,10 @@ class App extends React.Component {
                     </Navbar>
                     
                     <Route path="/" exact render={() => <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
-                    <Route path="/" exact render={() => <About title={this.state.home.title} subTitle={this.state.home.subTitle} />} />
-                    <Route path="/" exact render={() => <Projects title={this.state.home.title} />} />
-                    <Route path="/" exact render={() => <Resume title={this.state.home.title} />} />
-                    <Route path="/" exact render={() => <Contact title={this.state.home.title} />} />
+                    <Route path="/about" exact render={() => <About title={this.state.about.title} subTitle={this.state.about.subTitle} />} />
+                    <Route path="/projects" exact render={() => <Projects title={this.state.projects.title} />} />
+                    <Route path="/resume" exact render={() => <Resume title={this.state.resume.title} />} />
+                    <Route path="/contact" exact render={() => <Contact title={this.state.contact.title} />} />
 
                 </Container>
             </Router>
