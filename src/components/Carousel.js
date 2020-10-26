@@ -2,11 +2,12 @@ import React from 'react';
 
 import Card from '../components/Card';
 
-import emojigotchi from '../assets/images/emojigotchi.png';
-import delsecto from '../assets/images/delsecto.png';
-import netflix from '../assets/images/netflix.png';
-import portfolio from '../assets/images/portfolio.png';
-import wayfarer from '../assets/images/wayfarer.png';
+import Emojigotchi from '../assets/images/emojigotchi.png';
+import Delsecto from '../assets/images/delsecto.png';
+import Netflix from '../assets/images/netflix.png';
+import Portfolio from '../assets/images/portfolio.png';
+import Wayfarer from '../assets/images/wayfarer.png';
+
 import { Container, Row } from 'react-bootstrap';
 
 class Carousel extends React.Component {
@@ -19,7 +20,7 @@ class Carousel extends React.Component {
           id: 0,
           title: 'Emojigotchi',
           subTitle: 'First JavaScript App',
-          imgSrc: emojigotchi,
+          imgSrc: Emojigotchi,
           link: '#',
           selected: false
         },
@@ -27,7 +28,7 @@ class Carousel extends React.Component {
           id: 1,
           title: 'Delsecto',
           subTitle: 'MongoDB App',
-          imgSrc: delsecto,
+          imgSrc: Delsecto,
           link: '#',
           selected: false
         },
@@ -35,7 +36,7 @@ class Carousel extends React.Component {
           id: 2,
           title: 'Netflix Seris Reviews',
           subTitle: '24 Hour Collaboration with classmates & UX/UI students',
-          imgSrc: netflix,
+          imgSrc: Netflix,
           link: '#',
           selected: false
         },
@@ -43,7 +44,7 @@ class Carousel extends React.Component {
           id: 3,
           title: 'portfolio',
           subTitle: 'First Version of Portfolio to show my growth',
-          imgSrc: portfolio,
+          imgSrc: Portfolio,
           link: '#',
           selected: false
         },
@@ -51,7 +52,7 @@ class Carousel extends React.Component {
           id: 4,
           title: 'Wayfarer',
           subTitle: 'Django App',
-          imgSrc: wayfarer,
+          imgSrc: Wayfarer,
           link: 'https://wayfarernrc.herokuapp.com/',
           selected: false
         }
@@ -65,7 +66,7 @@ class Carousel extends React.Component {
     items[id].selected = items[id].selected ? false : true;
 
     items.forEach(item => {
-      if(item.ed !== id) {
+      if(item.id !== id) {
         item.selected = false;
       } 
     });
@@ -83,7 +84,7 @@ class Carousel extends React.Component {
 
   render() {
     return(
-      <Container flued={true}>
+      <Container fluid={true}>
         <Row className="justify-content-around">
           {this.makeItems(this.state.items)}
         </Row>
