@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Carousel from '../components/Carousel';
+
 function Projects(props) {
 
   return(
-    <p>Hey, gurl! Projects</p>
+  <Carousel />
   );
 }
 
