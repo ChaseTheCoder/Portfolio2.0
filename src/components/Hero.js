@@ -10,6 +10,7 @@ function Hero(props) {
           <Col md={8} sm={12}>
             { props.title && <h1 className="font-weight-bolder ">{props.title}</h1> }
             { props.subTitle && <h3 className="font-weight-light">{props.subTitle}</h3> }
+            { props.subTitle2 && <h3 className="font-weight-light">{props.subTitle2}</h3> }
             { props.text && <h3 className="lead font-weight-light">{props.text}</h3> }
           </Col>
         </Row>
