@@ -6,7 +6,7 @@ function Card(props) {
 
   return(
     <div>
-      <img className="" scr={props.item.imgSrc} alt={props.item.imgSrc} />
+      <iframe source={props.item.link}></iframe>
       { props.item.selected && <CardInfo title={props.item.title} subTitle={props.item.subtitle} link={props.item.link} /> }
     </div>
   );

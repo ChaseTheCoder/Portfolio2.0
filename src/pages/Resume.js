@@ -1,18 +1,15 @@
 import React from 'react';
-import { Jumbotron, Container, Row, Col } from 'react-bootstrap';
+import Hero from '../components/Hero';
+import DocIframe from '../components/DocViewer';
 
 function Resume(props) {
 
   return(
-    <Jumbotron className="bg-transparent jumbotron-flue p-0">
-    <Container fluid={true}>
-      <Row className="justify-content-center py-f">
-        <Col md={8} sm={12}>
-          { props.title && <h1 className="font-weight-bolder ">{props.title}</h1> }
-        </Col>
-      </Row>
-    </Container>
-  </Jumbotron>
+    <div>
+      <Hero title={props.title} />
+      <DocIframe source="https://documentcloud.adobe.com/link/track?uri=urn:aaid:scds:US:8a57ba12-ec75-47ad-8dbd-9874d9cc3ee9" />
+    </div>
+  
   );
 }
 

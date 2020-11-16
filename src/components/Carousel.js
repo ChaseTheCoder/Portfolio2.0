@@ -21,7 +21,7 @@ class Carousel extends React.Component {
           title: 'Emojigotchi',
           subTitle: 'First JavaScript App',
           imgSrc: Emojigotchi,
-          link: '#',
+          link: 'https://www.spacejam.com/',
           selected: false
         },
         {
@@ -29,7 +29,7 @@ class Carousel extends React.Component {
           title: 'Delsecto',
           subTitle: 'MongoDB App',
           imgSrc: Delsecto,
-          link: '#',
+          link: 'https://www.spacejam.com/',
           selected: false
         },
         {
@@ -37,7 +37,7 @@ class Carousel extends React.Component {
           title: 'Netflix Seris Reviews',
           subTitle: '24 Hour Collaboration with classmates & UX/UI students',
           imgSrc: Netflix,
-          link: '#',
+          link: 'https://www.spacejam.com/',
           selected: false
         },
         {
@@ -45,7 +45,7 @@ class Carousel extends React.Component {
           title: 'portfolio',
           subTitle: 'First Version of Portfolio to show my growth',
           imgSrc: Portfolio,
-          link: '#',
+          link: 'https://www.spacejam.com/',
           selected: false
         },
         {
@@ -53,7 +53,7 @@ class Carousel extends React.Component {
           title: 'Wayfarer',
           subTitle: 'Django App',
           imgSrc: Wayfarer,
-          link: 'https://wayfarernrc.herokuapp.com/',
+          link: 'https://www.spacejam.com/',
           selected: false
         }
       ]
