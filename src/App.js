@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { ExternalLink } from 'react-external-link';
 import Container from 'react-bootstrap/Container';
 import { Nav, Navbar } from 'react-bootstrap'
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -9,8 +10,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Resume from './pages/Resume';
-import Contact from './pages/Contact';
-
 
 class App extends React.Component {
 
@@ -23,9 +22,6 @@ class App extends React.Component {
                 { title: 'About', path: '/about' },
                 { title: 'Projects', path: '/projects' },
                 { title: 'Resume', path: '/resume' },
-                { title: 'Contact', path: '/contact ' },
-                { title: 'Github', path: '/contact ' },
-                { title: 'Contact', path: '/contact ' }
             ],
             home: {
                 title: 'Soft and Hard Skills To Bring Success',
@@ -43,9 +39,6 @@ class App extends React.Component {
             resume: {
                 title: 'Resume',
             },
-            contact: {
-                title: 'Let\'s chat!',
-            }
         }
     }
 
@@ -53,7 +46,7 @@ class App extends React.Component {
         return (
             <Router>
                 <Container className="p-0" fluid={true}>
-                    <Navbar className="border-bottom">
+                    <Navbar>
                         <Navbar.Brand as={Link} to="/" >Chase Sheaff</Navbar.Brand>
                         <Navbar.Toggle classname="border-bottom" aria-controls="navbar-toggle" />
                         <Navbar.Collapse id="navbar-toggle">
@@ -61,9 +54,14 @@ class App extends React.Component {
                                 <Link className="nav-link" to="/about">About</Link>
                                 <Link className="nav-link" to="/projects">Projects</Link>
                                 <Link className="nav-link" to="/resume">Resume</Link>
-                                <Link className="nav-link" to="/contact">Contact</Link>
-                                <FaGithub />
-                                <FaLinkedin />
+                                <ul class="navbar-nav ml-auto">
+                                    <li class="nav-link">
+                                        <ExternalLink href="https://github.com/ChaseTheCoder"><FaGithub size="1.25em" /></ExternalLink>
+                                    </li>
+                                    <li class="nav-link">
+                                        <ExternalLink href="https://www.linkedin.com/in/chasesheaff/"><FaLinkedin size="1.25em" /></ExternalLink>
+                                    </li>
+                                </ul>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
@@ -72,8 +70,6 @@ class App extends React.Component {
                     <Route path="/about" exact render={() => <About title={this.state.about.title} subTitle={this.state.about.subTitle} subTitle2={this.state.about.subTitle2} />} />
                     <Route path="/projects" exact render={() => <Projects title={this.state.projects.title} />} />
                     <Route path="/resume" exact render={() => <Resume title={this.state.resume.title} />} />
-                    <Route path="/contact" exact render={() => <Contact title={this.state.contact.title} />} />
-
                 </Container>
             </Router>
       );

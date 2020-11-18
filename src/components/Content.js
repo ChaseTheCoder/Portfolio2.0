@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
-function AboutContent(props) {
+function Content(props) {
 
   return(
     <Container fluid={true}>
@@ -14,4 +14,4 @@ function AboutContent(props) {
   )
 }
 
-export default AboutContent;
+export default Content;
