@@ -8,7 +8,7 @@ function Home(props) {
     <Container>
       <Row>
         <Col>
-          <img sm={4} src="/coffee.png" alt="coffee cup" />
+          <img className="h-80" sm={4} src="/coffee.png" alt="coffee cup" />
         </Col>
         <Col>
           <h1 sm={4} >This is where text will go</h1>
