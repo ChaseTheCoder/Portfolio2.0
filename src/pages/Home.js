@@ -1,13 +1,20 @@
 import React from 'react';
-
-import Hero from '../components/Hero';
+import { Container, Row, Col } from 'react-bootstrap';
+import '../css/Home.css';
 
 function Home(props) {
 
   return(
-    <div>
-      <Hero title={props.title} subTitle={props.subTitle} text={props.text } />
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <img sm={4} src="/coffee.png" alt="coffee cup" />
+        </Col>
+        <Col>
+          <h1 sm={4} >This is where text will go</h1>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

@@ -34,7 +34,7 @@ class App extends React.Component {
                 subTitle2: 'I\'m focusing on developing HTML5, CSS3, JavaScript, Python, React, and React Native. I\'m honing my skills deep in this area with guidance from senior software engineers. They\'ve been telling me to become an expert in a small amount as new software engineers are not thought of as generalist.'
             },
             projects: {
-                title: 'Resume',
+                title: 'Projects',
             },
             resume: {
                 title: 'Resume',
