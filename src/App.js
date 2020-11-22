@@ -38,6 +38,8 @@ class App extends React.Component {
             },
             resume: {
                 title: 'Resume',
+                linkText: 'Click here to open in Google',
+                doc: 'https://docs.google.com/document/d/e/2PACX-1vQP2JUgzNqDwMCG6HRnP5cMKOgY9kerlWN-xINawDq3oMiKDm1Xjc9ER4e3Kd2MmvM4Te2nXITBEjwP/pub?embedded=true'
             },
         }
     }
@@ -45,11 +47,11 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-                <Container className="p-0" fluid={true}>
+                <Container className="p-0 background-iamge" fluid={true}>
                     <Navbar>
                         <Navbar.Brand as={Link} to="/" >Chase Sheaff</Navbar.Brand>
                         <Navbar.Toggle classname="border-bottom" aria-controls="navbar-toggle" />
-                        <Navbar.Collapse id="navbar-toggle">
+                        <Navbar.Collapse id="basic-navbar-nav">
                             <Nav>
                                 <Link className="nav-link" to="/about">About</Link>
                                 <Link className="nav-link" to="/projects">Projects</Link>
@@ -69,7 +71,7 @@ class App extends React.Component {
                     <Route path="/" exact render={() => <Home title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} />} />
                     <Route path="/about" exact render={() => <About title={this.state.about.title} subTitle={this.state.about.subTitle} subTitle2={this.state.about.subTitle2} />} />
                     <Route path="/projects" exact render={() => <Projects title={this.state.projects.title} />} />
-                    <Route path="/resume" exact render={() => <Resume title={this.state.resume.title} />} />
+                    <Route path="/resume" exact render={() => <Resume title={this.state.resume.title} linkText={this.state.resume.linkText} doc={this.state.resume.doc}/>} />
                 </Container>
             </Router>
       );

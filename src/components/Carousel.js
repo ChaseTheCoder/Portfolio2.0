@@ -8,7 +8,7 @@ import Netflix from '../assets/images/netflix.png';
 import Portfolio from '../assets/images/portfolio.png';
 import Wayfarer from '../assets/images/wayfarer.png';
 
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 
 class Carousel extends React.Component {
 
@@ -85,7 +85,7 @@ class Carousel extends React.Component {
   render() {
     return(
       <Container fluid={true}>
-        <Row className="justify-content-around">
+        <Row className="justify-content-around py-3">
           {this.makeItems(this.state.items)}
         </Row>
       </Container>

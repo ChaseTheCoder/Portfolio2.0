@@ -6,7 +6,7 @@ function Card(props) {
 
   return(
     <div>
-      <iframe source={props.item.link}></iframe>
+      <iframe title="Projects" src={props.item.link}></iframe>
       { props.item.selected && <CardInfo title={props.item.title} subTitle={props.item.subtitle} link={props.item.link} /> }
     </div>
   );
