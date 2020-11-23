@@ -17,7 +17,7 @@ function Hero(props) {
         </Row>
         { props.doc && <Row className="justify-content-center py-0">
           <Col md={8} sm={12}>
-            <ExternalLink href="zhttps://docs.google.com/document/d/e/2PACX-1vQP2JUgzNqDwMCG6HRnP5cMKOgY9kerlWN-xINawDq3oMiKDm1Xjc9ER4e3Kd2MmvM4Te2nXITBEjwP/pub"><p className="font-weight-light" >View in Google</p></ExternalLink>
+            <ExternalLink href="https://docs.google.com/document/d/1fXHozGoTXDPhV2Xp-foFQJLb2aSSYTk-8YJWHFB7lhQ/edit?usp=sharing"><p className="font-weight-light" >View in Google</p></ExternalLink>
              <iframe 
             title="Resume Document"
             src={props.doc}
