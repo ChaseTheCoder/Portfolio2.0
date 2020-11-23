@@ -4,7 +4,7 @@ import Delsecto from '../assets/images/delsecto.png';
 import Netflix from '../assets/images/netflix.png';
 import Portfolio from '../assets/images/portfolio.png';
 import Wayfarer from '../assets/images/wayfarer.png';
-import { CardGroup, Card } from 'react-bootstrap';
+import { CardGroup, Card, Jumbotron, Container, Row, Col } from 'react-bootstrap';
 import { FaGithub } from 'react-icons/fa';
 
 function Carousel() {
@@ -54,7 +54,7 @@ function Carousel() {
 
   const renderCard = (card, id) => {
     return(
-      <Card style={{ width: "18rem" }} key={id}>
+      <Card style={{ width: "25rem" }} key={id}>
         <Card.Img variant="top" src={card.imgSrc} />
         <Card.Body>
           <Card.Title>{card.title}</Card.Title>
@@ -66,11 +66,19 @@ function Carousel() {
   }
 
   return(
-    <div>
-      <CardGroup>
-        {cardInfo.map(renderCard)}
-      </CardGroup>
-    </div>
+    <Jumbotron className="bg-transparent jumbotron-flue p-0">
+      <Container fluid={true}>
+        <Row className="justify-content-center py-3">
+          <Col md={8} sm={12}>
+            <div>
+              <CardGroup>
+                {cardInfo.map(renderCard)}
+              </CardGroup>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </Jumbotron>
   )
 
 };

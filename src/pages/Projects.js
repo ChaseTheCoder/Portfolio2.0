@@ -6,7 +6,7 @@ function Projects(props) {
 
   return(
     <div>
-      <Hero title={props.title} />
+      {/* <Hero title={props.title} /> */}
       <Carousel />
     </div>
   
